@@ -1,35 +1,86 @@
-<!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Palette builder</title>
-<link rel="stylesheet" href="style.css">
-<link rel="icon" type="image/png" href="favicon/favicon-16x16.png">
-</head>
-<body>
-<main>
-<h1>Palette builder</h1>
-<p class="mu">Build a dark palette one color at a time. Bad choices get blocked with a reason, so you learn why they fail.</p>
-<div class="f" style="margin-bottom:8px"><button id="tw" class="p">Website</button><button id="tr">Ricing</button></div>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Palette builder</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="favicon/favicon-16x16.png" />
+  </head>
+  <body>
+    <main>
+      <h1>Palette builder</h1>
+      <p class="mu">
+        Build a dark palette one color at a time. Bad choices get blocked with a
+        reason, so you learn why they fail.
+      </p>
+      <div class="f" style="margin-bottom: 8px">
+        <button id="tw" class="p">Website</button
+        ><button id="tr">Ricing</button>
+      </div>
 
-<h2>1. Pick a color</h2>
-<div class="card">
-<div class="f" style="margin-bottom:12px"><input type="color" id="cp" value="#7b5cf0"><input type="text" id="hx" value="#7B5CF0" maxlength="7" style="width:110px"><div id="pv" style="flex:1;min-width:80px;height:38px;border-radius:8px"></div></div>
-<div class="r"><span class="mu">Hue</span><input type="range" id="h" min="0" max="360"><span id="hv"></span></div>
-<div class="r"><span class="mu">Saturation</span><input type="range" id="s" min="0" max="100"><span id="sv"></span></div>
-<div class="r"><span class="mu">Lightness</span><input type="range" id="l" min="0" max="100"><span id="lv"></span></div>
-<div class="f" style="margin-top:12px"><select id="role"></select><button class="p" id="add">Add</button><button id="sug">Suggest a value</button><button id="clr">Clear palette</button></div>
-<div id="msg"></div>
-</div>
+      <h2>1. Pick a color</h2>
+      <div class="card">
+        <div class="f" style="margin-bottom: 12px">
+          <input type="color" id="cp" value="#7b5cf0" /><input
+            type="text"
+            id="hx"
+            value="#7B5CF0"
+            maxlength="7"
+            style="width: 110px"
+          />
+          <div
+            id="pv"
+            style="flex: 1; min-width: 80px; height: 38px; border-radius: 8px"
+          ></div>
+        </div>
+        <div class="r">
+          <span class="mu">Hue</span
+          ><input type="range" id="h" min="0" max="360" /><span id="hv"></span>
+        </div>
+        <div class="r">
+          <span class="mu">Saturation</span
+          ><input type="range" id="s" min="0" max="100" /><span id="sv"></span>
+        </div>
+        <div class="r">
+          <span class="mu">Lightness</span
+          ><input type="range" id="l" min="0" max="100" /><span id="lv"></span>
+        </div>
+        <div class="f" style="margin-top: 12px">
+          <select id="role"></select
+          ><button class="p" id="add">Add</button
+          ><button id="sug">Suggest a value</button
+          ><button id="clr">Clear palette</button>
+        </div>
+        <div id="msg"></div>
+      </div>
 
-<h2>2. Checklist</h2><div class="chips" id="chips"></div>
+      <h2>2. Checklist</h2>
+      <div class="chips" id="chips"></div>
 
-<h2>3. Your palette <span class="mu" style="font-size:13px;font-weight:400">(click a color to copy its hex)</span></h2>
-<div class="sws" id="sws"></div>
+      <h2>
+        3. Your palette
+        <span class="mu" style="font-size: 13px; font-weight: 400"
+          >(click a color to copy its hex)</span
+        >
+      </h2>
+      <div class="sws" id="sws"></div>
 
-<div id="pvw" style="display:none"><h2>Live preview</h2><div id="term"></div></div>
-<h2>4. Score</h2><div class="card" id="score"></div>
+      <div id="pvw" style="display: none">
+        <h2>Live preview</h2>
+        <div id="term"></div>
+      </div>
+      <h2>4. Score</h2>
+      <div class="card" id="score"></div>
 
-<h2 id="h5">5. CSS</h2><pre id="css"></pre><button id="cc">Copy all CSS</button>
-</main><div id="toast"></div>
-<script src="scripts.js"></script>
-</body></html>
+      <h2 id="h5">5. CSS</h2>
+      <pre id="css"></pre>
+      <button id="cc">Copy all CSS</button>
+    </main>
+    <div id="toast"></div>
+    <script src="scripts.js"></script>
+  </body>
+</html>
